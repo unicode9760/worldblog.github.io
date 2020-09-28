@@ -1,0 +1,1120 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.clear::after {
+    content: "";
+    clear: both;
+    display: block;
+    height: 0;
+}
+
+.bg-img {
+    background: url(../images/climb5.jpg) fixed no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+}
+
+
+/* navbar start */
+.navbar {
+    background: transparent !important;
+
+
+}
+
+.navbar-toggler {
+    background: #fff;
+    border-radius:0 !important;
+}
+
+.bd {
+    border-bottom: 2px solid white;
+}
+
+.container {
+    margin-top: 3%;
+}
+
+.navbar-brand {
+    color: #fff !important;
+    font-weight: bold;
+
+
+}
+
+.navbar ul li {
+    margin-left: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar ul li a {
+    color: #fff !important;
+    transition: 0.5s;
+    display: block;
+    position: relative;
+    transition: 0.5s;
+    padding: 20px !important;
+
+}
+
+
+.navbar ul li a::after {
+
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #f00;
+    display: block;
+    transform: scale(0);
+    transform-origin: left;
+    transition: all .5s ease-in 0s;
+
+
+
+}
+
+.navbar ul li a:hover::after {
+    transform: scale(1);
+
+}
+
+
+form {
+    position: relative;
+    margin-left: 2%;
+}
+
+.form-control {
+    background: transparent;
+    border: none;
+
+}
+
+.btn {
+    position: absolute;
+    top: 2%;
+    left: 70%;
+    background: none;
+    border: none;
+    outline: none;
+    border-radius: none;
+    color: dodgerblue;
+}
+
+.btn:hover {
+    background: none;
+    color: dodgerblue;
+}
+
+/* text effct */
+.text {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.text h1 {
+    margin: 10%;
+    padding: 0;
+    font-size: 10em;
+    line-height: 0.8em;
+    text-align: center;
+    color: #fff;
+}
+
+.text h1 span {
+    position: relative;
+    text-transform: uppercase;
+    display: block;
+}
+
+.text h1 span:nth-child(1):before {
+    content: '';
+    position: absolute;
+    top: calc(50% - 15px);
+    right: 0;
+    width: 50%;
+    height: 30px;
+    background: #f00;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.text h1:hover span:nth-child(1):before {
+    transform: scaleX(1);
+}
+
+.text h1 span:nth-child(2):before {
+    content: '';
+    position: absolute;
+    top: calc(50% - 15px);
+    left: 0;
+    width: 50%;
+    height: 30px;
+    background: #f00;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.text h1:hover span:nth-child(2):before {
+    transform: scaleX(1);
+}
+
+.text h1 span hide {
+    transition: 0.5s;
+    transition-delay: 1s;
+}
+
+.text h1:hover span hide {
+    transition-delay: 1s;
+    color: #f00;
+    opacity: 0;
+}
+
+.text h1:hover span:nth-child(1) hide {
+    padding-right: 30px;
+}
+
+.text h1:hover span:nth-child(2) hide {
+    padding-right: 40px;
+}
+
+/* swiper-slide start */
+.swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.swiper-container h1 {
+    text-align: center;
+    margin: 0 0 5% 0;
+    font-size: 4em;
+    position: relative;
+    font-family: 'Lato', sans-serif;
+}
+
+.swiper-container h1::before {
+    content: "";
+    position: absolute;
+    top: 60%;
+    left: 0px;
+    display: block;
+    width: 20%;
+    height: 2px;
+    background: black;
+    margin: 0 0 0 10%;
+
+}
+
+.swiper-container h1::after {
+    content: "";
+    position: absolute;
+    top: 60%;
+    right: 0px;
+    display: block;
+    width: 20%;
+    height: 2px;
+    background: black;
+    margin: 0 10% 0 0%;
+    border-radius: 2px;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    background: #fff;
+    position: relative;
+    cursor: pointer;
+}
+
+.swiper-slide .img-bx {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+
+}
+
+.swiper-slide .img-bx img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.swiper-slide .details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 300px;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.7s ease;
+}
+
+.swiper-slide:hover .details {
+    width: 300px;
+}
+
+.swiper-slide .details a {
+    margin: 0;
+    padding: 5px 10px;
+    background: transparent;
+    font-size: 1.5em;
+    text-decoration: none;
+    border: 2px solid #fff;
+    color: #fff;
+
+}
+
+/* video start */
+.video h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.video h1 {
+    text-align: center;
+    margin: 2% 0 5% 0;
+    font-size: 4em;
+    position: relative;
+    font-family: 'Lato', sans-serif;
+}
+
+.video h1::before {
+    content: "";
+    position: absolute;
+    top: 60%;
+    left: 0px;
+    display: block;
+    width: 20%;
+    height: 2px;
+    background: black;
+    margin: 0 0 0 10%;
+
+}
+
+.video h1::after {
+    content: "";
+    position: absolute;
+    top: 60%;
+    right: 0px;
+    display: block;
+    width: 20%;
+    height: 2px;
+    background: black;
+    margin: 0 10% 0 0%;
+    border-radius: 2px;
+}
+
+.video .content1 a {
+    text-decoration: none;
+    color: #000;
+
+}
+
+.video .content1 a:hover {
+
+    color: #0033FF;
+    transition: 2s;
+}
+
+.video .content2 a {
+    text-decoration: none;
+    color: #000;
+    transition: 2s;
+}
+
+.video .content2 a:hover {
+
+    color: #0033FF;
+}
+
+.video .content1 h5 {
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.video .content2 h5 {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.video .content2 h2 {
+    font-size: 1.2em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.icon1 .fa-calendar-alt {
+    margin-left: 5%;
+}
+
+.icon1 .fa-comment-dots {
+    margin-left: 5%;
+}
+
+.icon1 .fa-thumbs-up {
+    margin-left: 5%;
+}
+
+.icon2 .fa-thumbs-up {
+    margin-left: 5%;
+}
+
+.vdo3 {
+    margin-top: 15%;
+}
+
+.vdo4 {
+    margin-top: 15%;
+}
+
+/* post strat */
+
+.post h3 {
+    text-align: center;
+    font-size: 4em;
+    margin: 5% 0 3% 0;
+    position: relative;
+    font-family: 'Lato', sans-serif;
+}
+
+.post h3::before {
+    content: "";
+    position: absolute;
+    top: 60%;
+    left: 0px;
+    display: block;
+    width: 20%;
+    height: 2px;
+    background: black;
+    margin: 0 0 0 10%;
+
+}
+
+.post h3::after {
+    content: "";
+    position: absolute;
+    top: 60%;
+    right: 0px;
+    display: block;
+    width: 20%;
+    height: 2px;
+    background: black;
+    margin: 0 10% 0 0%;
+    border-radius: 2px;
+}
+.post .img1 {
+    width: 100%;
+    height: 450px;
+}
+.post img{
+    width: 100%;
+    height: 200px;
+ 
+}
+.post .content{
+    padding: 10px 0;;
+}
+.post .content h1 {
+    font-family: 'Lato', sans-serif;
+    font-size:1.2em; 
+}
+.post .content a{
+    text-decoration: none;
+    color: #444444;
+    padding-left:5px ;
+}
+#sd h1{
+font-size: 2em;
+}
+
+/* post end */
+.recent {
+    padding: 50px 0;
+}
+
+.recent h1 {
+    text-align: center;
+    position: relative;
+    margin: 3% 0;
+    font-size: 4em;
+    font-family: 'Lato', sans-serif;
+}
+
+.recent h1::before {
+    content: "";
+    position: absolute;
+    top: 60%;
+    left: 0px;
+    display: block;
+    width: 20%;
+    height: 2px;
+    background: black;
+    margin: 0 0 0 10%;
+
+}
+
+.recent h1::after {
+    content: "";
+    position: absolute;
+    top: 60%;
+    right: 0px;
+    display: block;
+    width: 20%;
+    height: 2px;
+    background: black;
+    margin: 0 10% 0 0%;
+    border-radius: 2px;
+}
+
+.recent img {
+    width: 150px;
+    height: 100px;
+    float: left;
+    margin-right: 5%;
+    margin-top: 5%;
+
+}
+
+.recent .content a {
+    text-decoration: none;
+    color: #000;
+    transition: 2s;
+}
+
+.recent .content a:hover {
+    color: #0033FF;
+}
+
+.recent .content h4 {
+    font-size: 1em;
+    margin-top: 7%;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.footer {
+    background: url(../images/f3.jpg);
+    background-size: cover;
+    background-position: center;
+ padding: 80px 0;
+    
+}
+
+.footer h1 {
+    margin-top: 25%;
+    margin-bottom: 15%;
+    color: #fff;
+}
+
+.footer .about h2 {
+    font-size: 4em;
+    color: #fff;
+    margin: 15% 0 10% 0;
+}
+
+.footer .about h1 {
+    position: relative;
+    font-family: 'Lato', sans-serif;
+}
+
+.footer .about h1::after {
+    content: "";
+    position: absolute;
+    top: 60%;
+    right: 0px;
+    display: block;
+    width: 35%;
+    height: 3px;
+    background: rgba(153, 153, 153, 0.8);
+    margin: 0 15% 0 0%;
+
+}
+
+.footer .about p {
+    color: #fff;
+    font-size: 1em;
+    line-height: 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer .about i {
+    margin-left: 5%;
+    border-radius: 50px;
+    padding: 10px 10px;
+    margin-top: 5%;
+    color: #fff;
+    transition: 0.7s;
+
+}
+
+.footer .about i:hover {
+    transform: rotate(360deg);
+}
+
+.fa-facebook-square:hover {
+    background: #0033FF;
+}
+
+.fa-twitter:hover {
+    background: #0099FF;
+}
+
+.fa-instagram:hover {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.fa-youtube:hover {
+    background: #FF0000;
+}
+
+.fa-snapchat-ghost:hover {
+    background: #FFFF00;
+}
+
+.footer .nav1 h1 {
+    position: relative;
+    font-family: 'Lato', sans-serif;
+}
+
+.footer .nav1 h1::after {
+    content: "";
+    position: absolute;
+    top: 60%;
+    right: 0px;
+    display: block;
+    width: 35%;
+    height: 3px;
+    background: rgba(153, 153, 153, 0.8);
+    margin: 0 5% 0 0%;
+
+}
+
+.footer .nav1 ul li {
+    
+    list-style: none;
+    font-size: 1em;
+    margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer .nav1 ul li a {
+    color: #fff !important;
+
+    display: block;
+    position: relative;
+    transition: 0.5s;
+    padding: 5px !important;
+    text-decoration: none;
+}
+
+.footer .nav1 ul li a::before {
+
+    content: "";
+    position: absolute;
+    left: 30%;
+    top: 50%;
+    width: 40%;
+    height: 1px;
+    background: #0033FF;
+    display: block;
+    transform: scale(0);
+    transform-origin: left;
+    transition: all .5s ease-in 0s;
+
+}
+
+.footer .nav1 ul li a:hover::before {
+    transform: scale(1);
+
+}
+
+.footer .nav1 ul li a:hover {
+    color: #0033FF !important;
+
+}
+
+.footer .popular h1 {
+    position: relative;
+    font-family: 'Lato', sans-serif;
+}
+
+.footer .popular h1::after {
+    content: "";
+    position: absolute;
+    top: 60%;
+    right: 0px;
+    display: block;
+    width: 30%;
+    height: 3px;
+    background: rgba(153, 153, 153, 0.8);
+    margin: 0 0 0 0%;
+
+}
+
+.footer .popular h4 a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.7em;
+    transition: 2s;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer .popular h4 a:hover {
+    color: #0033FF;
+}
+
+.footer .popular p a {
+    text-decoration: none;
+    color: #999999;
+    font-size: 1em;
+    transition: 2s;
+}
+
+.footer .popular p a:hover {
+    color: #0033FF;
+}
+
+.footer2 {
+    margin-top: 2%;
+}
+
+.footer2 .content {
+    border-top: 1px solid #999999;
+    padding-top: 15px;
+
+}
+
+.footer2 .content ul li {
+    float: right;
+    list-style: none;
+    margin-right: 2%;
+    font-family: 'Montserrat', sans-serif;
+
+
+}
+
+.footer2 .content ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.footer2 .content ul li a:hover {
+    text-decoration: none;
+    color: #0033FF;
+}
+
+.footer2 .content p {
+    color: #fff;
+    float: left;
+    margin-left: 2%;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+
+/* MEDIA QUERY */
+@media (min-width: 991px) and (max-width: 1125px) {
+  .footer .about h1::after {
+    
+    width: 20%;
+   
+    margin: 0 5% 0 30%;
+
+}
+.footer .nav1 h1::after {
+    
+    width: 20%;
+   
+    margin: 0 5% 0 30%;
+
+}
+.footer .popular h1::after {
+    
+    width: 20%;
+   
+    margin: 0 0 0 35%;
+
+}
+.footer .nav1 ul li a::before {
+
+   
+    left: 40%;
+    top: 50%;
+   
+
+}
+
+.text h1 {
+    margin: 30%;
+   font-size: 8em;
+    
+}
+  
+}
+
+@media only screen and (max-width:991px) {
+    .post .img1 {
+        width: 100%;
+        height: 400px;
+    }
+    .post img{
+       height: 150px;
+   }
+   .post .content h1{
+       font-size: 1em;
+   }
+   .text h1 {
+    margin: 20%;
+   
+    
+}
+    .navbar ul li a::after {
+
+   
+    width: 15%;
+    height: 2px;
+   
+
+
+
+}
+.btn {
+   
+    top: 2%;
+    left: 20%;
+    }
+    
+    .video h1::before {
+
+        margin: 0 0 0 5%;
+
+    }
+
+    .video h1::after {
+
+        margin: 0 5% 0 0%;
+
+    }
+
+    .video .content2 h2 {
+        font-size: 1em;
+    }
+
+    .video .content1 h2 {
+        font-size: 1.2em;
+    }
+
+    .post h3::before {
+        content: "";
+        position: absolute;
+        top: 60%;
+        left: 0px;
+        display: block;
+        width: 20%;
+        height: 2px;
+        background: black;
+        margin: 0 0 0 5%;
+
+    }
+
+    .post h3::after {
+        content: "";
+        position: absolute;
+        top: 60%;
+        right: 0px;
+        display: block;
+        width: 20%;
+        height: 2px;
+        background: black;
+        margin: 0 5% 0 0%;
+
+    }
+
+  
+
+    
+
+    .recent h1::before {
+        content: "";
+        position: absolute;
+        top: 60%;
+        left: 0px;
+        display: block;
+        width: 20%;
+        height: 2px;
+        background: black;
+        margin: 0 0 0 5%;
+
+    }
+
+    .recent h1::after {
+        content: "";
+        position: absolute;
+        top: 60%;
+        right: 0px;
+        display: block;
+        width: 20%;
+        height: 2px;
+        background: black;
+        margin: 0 5% 0 0%;
+
+    }
+
+    .footer h1 {
+        font-size: 1.5em;
+    }
+
+    .footer .about i {
+        margin-left: 0%;
+
+    }
+
+    .footer .about h2 {
+        font-size: 2em;
+    }
+
+    .footer .popular h4 a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 0.7em;
+        transition: 2s;
+    }
+
+    .footer2 {
+        margin-top: 2%;
+        
+    }
+    .footer .nav1 ul li a::before {
+
+   
+    left: 50%;
+    top: 50%;
+   
+
+}
+}
+
+
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .post img{
+        width: 100%;
+        height: 300px;
+     
+    }
+    .text h1 {
+        margin: 30%;
+       font-size: 8em;
+        
+    }
+   .btn {
+   
+    top: 2%;
+    left: 28%;
+    }
+    .video h1::before {
+
+        margin: 0 0 0 2%;
+
+    }
+
+    .video h1::after {
+
+        margin: 0 2% 0 0%;
+
+    }
+
+    .video .content2 h2 {
+        font-size: 1.5em;
+    }
+
+    .video .content1 h2 {
+        font-size: 2.2em;
+    }
+
+    .video .vdo1,
+    .vdo2,
+    .vdo3,
+    .vdo4 {
+        margin-top: 5%;
+    }
+
+    
+
+
+    .recent h1::before {
+        content: "";
+        position: absolute;
+        top: 60%;
+        left: 0px;
+        display: block;
+        width: 20%;
+        height: 2px;
+        background: black;
+        margin: 0 0 0 2%;
+
+    }
+
+    .recent h1::after {
+        content: "";
+        position: absolute;
+        top: 60%;
+        right: 0px;
+        display: block;
+        width: 20%;
+        height: 2px;
+        background: black;
+        margin: 0 2% 0 0%;
+
+    }
+
+    .swiper-container h1::before {
+
+        margin: 0 0 0 2%;
+
+    }
+
+    .swiper-container h1::after {
+
+        margin: 0 2% 0 0%;
+
+    }
+
+    
+    
+}
+@media only screen and (max-width:767px){
+    .navbar ul li a::after {
+        display: none;
+    }
+    .footer .about h1::after {
+
+        display: none;
+ 
+     }
+     .footer .nav1 h1::after {
+ 
+         display: none;
+ 
+     }
+ 
+     .footer .popular h1::after{
+         display: none;
+     }
+}
+@media only screen and (max-width:706px) {
+    .swiper-container h1::before {
+        display: none;
+
+    }
+
+    .swiper-container h1::after {
+        display: none;
+    }
+
+    .video h1::before {
+        display: none;
+    }
+
+    .video h1::after {
+        display: none;
+    }
+
+    .post h3::before {
+        display: none;
+
+    }
+
+    .post h3::after {
+        display: none;
+    }
+
+    .recent h1::before {
+        display: none;
+
+    }
+
+    .recent h1::after {
+        display: none;
+    }
+
+}
+@media only screen and (max-width:575px){
+    .footer h1{
+        margin: 0;
+        padding:15px 0 ;
+        font-size: 2em;
+    }
+    .footer .about h2{
+        margin: 0;
+        font-size: 1.2em;
+    }
+    .footer .about i{
+        margin: 0;
+    }
+    .footer .nav1 ul li a{
+        padding: 0 !important;
+    }
+}
+@media only screen and (max-width:480px){
+    .post img{
+        width: 100%;
+        height: 340px;
+     
+    }
+    .text h1 {
+        margin: 40%;
+       font-size: 6em;
+        
+    }
+    .bg-img{
+        height: 70vh;
+    }
+      
+    .footer2 .content ul li a{
+        display: none;
+    }
+
+.recent .content h4{
+    font-size: 0.9em;
+}
+}
+@media only screen and (max-width:320px){
+    .recent h1{
+        font-size:3em;
+    }
+    #sd h1{
+        font-size: 1.5em;
+    }
+    .post h3{
+        font-size:3em ;
+    }
+    .video h1{
+        font-size: 3em;
+    }
+    .swiper-container h1{
+        font-size: 3em;
+    }
+}
